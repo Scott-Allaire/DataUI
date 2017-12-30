@@ -1,17 +1,19 @@
 <mat-card>
   <mat-card-header>Login</mat-card-header>
   <mat-card-content>
-    <form class="example-form">
+    <form class="login-form">
 
       <mat-form-field>
-        <input matInput #username maxlength="256" placeholder="Username">
+        <input matInput #username maxlength="256" placeholder="Username"
+               [ngModel]="username">
       </mat-form-field>
       <mat-form-field>
-        <input type="password" matInput #password maxlength="256" placeholder="Password">
+        <input type="password" matInput #password maxlength="256" placeholder="Password"
+               [ngModel]="password">
       </mat-form-field>
 
     </form>
-    <button mat-button>Login</button>
+    <button mat-button (click)="login()">Login</button>
   </mat-card-content>
 </mat-card>
 

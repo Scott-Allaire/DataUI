@@ -1,7 +1,8 @@
 import {HttpClientModule} from "@angular/common/http";
 import {NgModule} from '@angular/core';
+import {FormsModule} from "@angular/forms";
 import {
-  MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule,
+  MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSnackBar, MatSnackBarModule,
   MatToolbarModule
 } from "@angular/material";
 import {BrowserModule} from '@angular/platform-browser';
@@ -10,6 +11,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AppComponent} from './app.component';
 import {LoginComponent} from './login/login.component';
 import {ReadingService} from "./reading.service";
+import {UserService} from "./user.service";
 
 
 @NgModule({
@@ -20,6 +22,7 @@ import {ReadingService} from "./reading.service";
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    FormsModule,
     HttpClientModule,
     MatButtonModule,
     MatCardModule,
@@ -27,9 +30,12 @@ import {ReadingService} from "./reading.service";
     MatInputModule,
     MatFormFieldModule,
     MatToolbarModule,
+    MatSnackBarModule
+    ,
   ],
   providers: [
     ReadingService,
+    UserService,
   ],
   bootstrap: [
     AppComponent
