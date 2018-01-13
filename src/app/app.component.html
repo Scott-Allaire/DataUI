@@ -4,11 +4,18 @@
   <mat-icon class="example-icon">refresh</mat-icon>
 </mat-toolbar>
 
-<app-login></app-login>
-
 <mat-card>
-  <mat-card-header>Stuff</mat-card-header>
+  <mat-card-header>Readings</mat-card-header>
   <mat-card-content>
-    <div>{{stuff}}</div>
+    <div style="width: 40%;">
+      <canvas
+        baseChart
+        [chartType]="'line'"
+        [datasets]="chartData"
+        [options]="chartOptions"
+        [legend]="true"
+        (chartClick)="onChartClick($event)">
+      </canvas>
+    </div>
   </mat-card-content>
 </mat-card>

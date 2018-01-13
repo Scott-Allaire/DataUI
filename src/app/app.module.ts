@@ -12,6 +12,7 @@ import {AppComponent} from './app.component';
 import {LoginComponent} from './login/login.component';
 import {ReadingService} from "./reading.service";
 import {UserService} from "./user.service";
+import {ChartsModule} from 'ng2-charts';
 
 
 @NgModule({
@@ -30,8 +31,8 @@ import {UserService} from "./user.service";
     MatInputModule,
     MatFormFieldModule,
     MatToolbarModule,
-    MatSnackBarModule
-    ,
+    MatSnackBarModule,
+    ChartsModule
   ],
   providers: [
     ReadingService,
